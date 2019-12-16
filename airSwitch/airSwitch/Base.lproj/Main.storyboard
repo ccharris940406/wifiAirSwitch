@@ -55,6 +55,10 @@
                         <color key="backgroundColor" red="0.028465757146477699" green="0.028538914397358894" blue="0.022149389609694481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="hostIP" destination="1XD-HR-crp" id="bZ9-ge-9ad"/>
+                        <outlet property="port" destination="qdL-L1-5Ua" id="bgF-Nv-TuC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

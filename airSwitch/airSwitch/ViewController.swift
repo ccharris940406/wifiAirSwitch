@@ -10,13 +10,17 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    
-    
+       
     var state = true
+    var connection = socketConnection(host: "192.168.12.1", port: 4545)
+    
+    @IBOutlet weak var hostIP: UITextField!
+    @IBOutlet weak var port: UITextField!
     
     @IBAction func on_offControl(_ sender: UIButton) {
         
         print("the state is \(state)");
+        //print("ip: \(String(hostIP.text!)) port: \(Int(port.text!) ?? 8080)")
         
         if state == true {
             state = false
