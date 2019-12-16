@@ -13,7 +13,6 @@
 		22483D6323A43B55000DF19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22483D6123A43B55000DF19A /* Main.storyboard */; };
 		22483D6523A43B56000DF19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22483D6423A43B56000DF19A /* Assets.xcassets */; };
 		22483D6823A43B56000DF19A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22483D6623A43B56000DF19A /* LaunchScreen.storyboard */; };
-		22BCC9D023A7F5F200D188E2 /* rpiConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BCC9CF23A7F5F200D188E2 /* rpiConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		22483D6423A43B56000DF19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22483D6723A43B56000DF19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22483D6923A43B56000DF19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22BCC9CF23A7F5F200D188E2 /* rpiConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpiConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				22483D5F23A43B55000DF19A /* ViewController.swift */,
 				22483D6123A43B55000DF19A /* Main.storyboard */,
 				22483D6923A43B56000DF19A /* Info.plist */,
-				22BCC9CF23A7F5F200D188E2 /* rpiConnection.swift */,
 			);
 			path = airSwitch;
 			sourceTree = "<group>";
@@ -150,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22483D6023A43B55000DF19A /* ViewController.swift in Sources */,
-				22BCC9D023A7F5F200D188E2 /* rpiConnection.swift in Sources */,
 				22483D5C23A43B55000DF19A /* AppDelegate.swift in Sources */,
 				22483D5E23A43B55000DF19A /* SceneDelegate.swift in Sources */,
 			);
