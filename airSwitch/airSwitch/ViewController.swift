@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     
@@ -27,6 +28,10 @@ class ViewController: UIViewController {
             sender.setTitle("On", for: UIControl.State.normal)
             sender.backgroundColor = #colorLiteral(red: 0.8479966521, green: 0.8250616789, blue: 0.4791584611, alpha: 1)
         }
+        
+        var controler = socketConnection(host: "test", port: 3128)
+        
+        print("Host \(controler.host) port \(controler.port)")
     }
 }
 
