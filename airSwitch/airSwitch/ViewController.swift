@@ -12,7 +12,7 @@ import UIKit
 class ViewController: UIViewController {
        
     var state = true
-    var connection = socketConnection(host: "192.168.12.1", port: 4545)
+    var conn: switchConnection?
     
     @IBOutlet weak var hostIP: UITextField!
     @IBOutlet weak var port: UITextField!
@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         
         print("the state is \(state)");
         //print("ip: \(String(hostIP.text!)) port: \(Int(port.text!) ?? 8080)")
+        
+        conn = switchConnection(host: "10.0.0.1", port: 50400)
+        conn?.sendSomeThing()
         
         if state == true {
             state = false
@@ -32,10 +35,13 @@ class ViewController: UIViewController {
             sender.setTitle("On", for: UIControl.State.normal)
             sender.backgroundColor = #colorLiteral(red: 0.8479966521, green: 0.8250616789, blue: 0.4791584611, alpha: 1)
         }
+        
     }
     
+    
+    
     @IBAction func setConfigure(_ sender: UIButton) {
-        
+
     }
 }
 

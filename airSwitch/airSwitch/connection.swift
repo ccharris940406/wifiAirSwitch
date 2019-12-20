@@ -7,20 +7,18 @@
 //
 
 import Foundation
+import Network
 
-class socketConnection{
-    var host: String
-    var port: Int
-    var socketId: Int = 0
+class switchConnection{
+    var networkConnection: NWConnection?
+    var endpoint: NWEndpoint?
     
-    init(host: String, port: Int) {
-        self.host = host
-        self.port = port
-        self.cretateSocket()
-    }
     
-    func cretateSocket(){
-        self.socketId = Int(socket(PF_INET, SOCK_STREAM, 0))
+    init(host: String, port :UInt16) {
+        self.endpoint = NWEndpoint.hostPort(host: NWEndpoint.Host(host), port:
+            NWEndpoint.Port(rawValue: port)!)
+        networkConnection = NWConnection(to: self.endpoint!, using: NWParameters.tcp)
+        print("Created connection \(String(describing: self.networkConnection?.endpoint))")
     }
     
     func setState(data: String){
@@ -29,6 +27,17 @@ class socketConnection{
     
     func getState(){
         
+    }
+    
+    func sendSomeThing(){
+        var test:String
+        test = "airSwitch"
+        networkConnection?.start(queue: DispatchQueue(label: "test"))
+        networkConnection?.send(content: test.data(using: .ascii), isComplete: true,completion: .idempotent)
+    }
+    
+    func closeConnection(){
+        networkConnection?.cancel()
     }
     
 }
